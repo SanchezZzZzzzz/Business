@@ -1,6 +1,6 @@
 #include "glew.h"
 #include "glut.h"
-#include "ModelLoader.h"
+#include "ModelLoader.cpp"
 #include <cmath>
 using namespace std;
 typedef GLfloat GLTVector3[3];
@@ -100,16 +100,12 @@ void SetupRC() {
 	GLfloat diffuseLight[] = { 0.7f, 0.7f, 0.7f, 1 };
 	GLfloat specular[] = { 1, 1, 1, 1 };
 	GLfloat specref[] = { 1, 1, 1, 1 };
-	
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, ambientLight);
-	//glLightf(GL_LIGHT0, GL_SPOT_CUTOFF, 90.0f);
 	glLightfv(GL_LIGHT1, GL_AMBIENT, ambientLight);
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuseLight);
 	glLightfv(GL_LIGHT1, GL_SPECULAR, ambientLight);
-	//glLightf(GL_LIGHT1, GL_SPOT_CUTOFF, 90.0f); 
-
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 	//glMaterialfv(GL_FRONT, GL_SPECULAR, specref);
