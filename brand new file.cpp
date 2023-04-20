@@ -80,7 +80,7 @@ void RenderScene(void){
 	glVertex3f(-1000.0f, -150.0f, -1000.0f);
 	glColor3ub(0, 255, 0);
 	glVertex3f(-1000.0f, -150.0f, 1000.0f);
-	glVertex3f(-1000.0f, -150.0f, 1000.0f);
+	glVertex3f(1000.0f, -150.0f, 1000.0f);
 	glEnd();
 	car.Translate(MovX, -100.0f, MovZ);
 	car.Draw_objects(1, 0);
