@@ -40,7 +40,7 @@ namespace ml {
         string materials = ""; //Файл с материалами
         GLfloat ModelCoords[3] = { 0, 0, 0 };
         GLfloat ModelRot[3] = {0, 0, 0};
-        void Model_import(string Fname) { //Метод импорта модели, Fname - obj файл для импортп
+        void Import_objects(string Fname) { //Метод импорта модели, Fname - obj файл для импортп
             int preV = 0, preT = 0, preN = 0; //индексы для смещения при новом объекте
             int postV = 0, postT = 0, postN = 0; //Принимают Pre-значения для нового объекта
             const string tempFname = Fname; //Имя файла в const строке
@@ -160,7 +160,7 @@ namespace ml {
             else //А нет файла у нас!
                 cout << "Error! Couldn't open the file!\n";
         }
-        void Model_draw(bool is_smooth, bool Enable_dark) { //Давайте рисовать!
+        void Draw_objects(bool is_smooth, bool Enable_dark) { //Давайте рисовать!
             glPushMatrix();
             glTranslatef(ModelCoords[0], 0, 0);
             glTranslatef(0, 0, ModelCoords[2]);
@@ -196,9 +196,6 @@ namespace ml {
             ModelCoords[0] = x;
             ModelCoords[1] = y;
             ModelCoords[2] = z;
-        }
-        void Rotate(GLfloat x, GLfloat y, GLfloat z) {
-
         }
     private:
         void Add_material() { //Добавления материала
