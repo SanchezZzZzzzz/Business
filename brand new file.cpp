@@ -159,12 +159,12 @@ void Keys(int key, int x, int y) {
 		if (key == GLUT_KEY_UP) {
 			RsX += 5;
 			if (RsX > 360)
-				RsY = 0;
+				RsX = 0;
 		}
 		if (key == GLUT_KEY_DOWN) {
 			RsX -= 5;
 			if (RsX > 360)
-				RsY = 0;
+				RsX = 0;
 		}
 		if (key == GLUT_KEY_LEFT) {
 			RsY += 5;
